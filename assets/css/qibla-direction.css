@@ -1,0 +1,198 @@
+/* Overall container for Qibla Direction */
+.qibla-direction-container {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
+    border: 1px solid #e0e0e0;
+    position: relative; /* Ensure labels are positioned relative to this container */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the main container */
+.qibla-direction-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Header for the Qibla Direction Section */
+.qibla-direction-header h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the compass container */
+.qibla-direction-body {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+    margin-top: 30px;
+}
+
+/* Container for the rotating compass */
+#qibla-direction-display {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border: 8px solid #1abc9c;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* The rotating arrow for the compass */
+.qibla-arrow-icon {
+    position: absolute;
+    width: 50px;
+    height: 12px;
+    background-color: #e74c3c;
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Text displaying Qibla direction */
+#qibla-direction-text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Location information display */
+#user-location {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Footer with additional info or instructions */
+.qibla-direction-footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #95a5a6;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.qibla-direction-footer a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.qibla-direction-footer a:hover {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+/* Spinner animation for loading */
+.qibla-spinner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ecf0f1;
+    border-top: 5px solid #2980b9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+/* Spinner animation keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+    .qibla-direction-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    #qibla-direction-display {
+        width: 180px;
+        height: 180px;
+    }
+
+    .qibla-arrow-icon {
+        width: 40px;
+        height: 10px;
+    }
+
+    #qibla-direction-text {
+        font-size: 18px;
+    }
+
+    .qibla-spinner {
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        margin-left: -20px;
+    }
+}
+
+/* Direction labels (North, East, South, West) */
+.qibla-direction-mark {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: uppercase;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.6); /* Add background to make text more visible */
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.qibla-direction-mark.north {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.qibla-direction-mark.east {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.qibla-direction-mark.south {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.qibla-direction-mark.west {
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
