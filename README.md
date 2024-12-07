@@ -135,8 +135,9 @@ We welcome contributions! If you'd like to improve the plugin, feel free to fork
 <h3>Credits:</h3>
 Author: Moursalin Islam | OnexusDev
 Plugin Name: Masjid Management
-Version: 1.0
+Version: 1.0<br>
 <hr>
+
 <h3><Screen-Shot/h3><br>
 <a href="https://ibb.co.com/FXtK2tW"><img src="https://i.ibb.co.com/sCr2nrP/Screenshot-2024-12-07-212121.png" alt="Screenshot-2024-12-07-212121" border="0"></a>
 <a href="https://ibb.co.com/59Hy6yb"><img src="https://i.ibb.co.com/dcYqrq8/Screenshot-2024-12-07-212154.png" alt="Screenshot-2024-12-07-212154" border="0"></a>
